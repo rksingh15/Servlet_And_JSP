@@ -28,9 +28,9 @@ public class RegisterBack extends HttpServlet {
         resp.setContentType("text/html");
 
         // JDBC URL, username, password
-        String url = "jdbc:mysql://localhost:3306/student_db?useSSL=false&serverTimezone=UTC";
+        String url = "jdbc:mysql://localhost:3306/student_db;
         String dbUser = "root";
-        String dbPass = "12212729Rk@";
+        String dbPass = "yourPass";
 
         String sql = "INSERT INTO student(name, email, password, gender, city) VALUES(?,?,?,?,?)";
 
@@ -68,3 +68,4 @@ public class RegisterBack extends HttpServlet {
         resp.sendRedirect("registerFront.jsp");
     }
 }
+
